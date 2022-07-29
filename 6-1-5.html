@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        //변수 선언
+        const test = {
+            a:function () {
+                console.log(this)
+            },
+            b:() => {
+                console.log(this)
+            }
+        }
+        // 메소드 호출
+        test.a()
+        test.b()
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        const listener = (event) => {
+            const h1 = document.querySelector('h1')
+            const length = event.currentTarget.value.length //event.currentTarget가 textarea가됨
+            h1.textContent = `글자 수 : ${length}`
+            
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const textarea = document.querySelector('textarea')
+            const h1 = document.querySelector('h1')
+            textarea.addEventListener('keyup', listener)
+        })
+    </script>
+</head>
+<body>
+    <h1></h1>
+    <textarea></textarea>
+</body>
+</html>

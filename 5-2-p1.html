@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        //변수선언
+        let numbers = [273, 25, 75, 52, 103, 32, 57, 24, 76]
+
+        //홀수만 출력하는 필터 메소드
+        numbers = numbers.filter((value) => {
+            return value % 2 !== 0
+        })
+
+        numbers = numbers.filter((value) => {
+            return value <= 100
+        })
+
+        numbers = numbers.filter((value) => {
+            return value % 5 === 0
+        })
+
+        console.log(numbers)
+    </script>
+</head>
+<body>
+</body>
+</html>

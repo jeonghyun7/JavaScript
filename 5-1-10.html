@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        function min(first,...rests) {
+            //변수 선언
+            let output
+            let items
+
+            //매개변수의 자료형에 따라 조건 분기하기
+            if(Array.isArray(first)) {
+                output = first[0]
+                items=first
+            } else if(typeof(first)==='number') {
+                output=first
+                items=rests
+            }
+
+            //이전 절에서 살펴보았던 최솟값 구하는 공식
+            for (const item of items) {
+                if(output > item) {
+                    output = item
+                }
+            }
+            return output
+        }
+        //배열 전부 first 고정적 매개변수에만 들어가짐
+        console.log(`min(배열): ${min([52,273,32,103,275,24,57])}`)
+
+        /* 연속된 숫자들이기에 52가 고정적 매개변수인 first에 들어가고 나머지 
+        273부터는 가변적 매개변수인 rests에 들어가짐 */
+        console.log(`min(숫자,...): ${min(52,273,32,103,275,24,57)}`)
+    </script>
+</head>
+<body>
+</body>
+</html>

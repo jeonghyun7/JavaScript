@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const textarea = document.querySelector('textarea')
+            const h1 = document.querySelector('h1')
+            let timerld
+            
+            textarea.addEventListener('focus', (event) => {
+                timerld = setInterval(() => {
+                    const length = textarea.value.length
+                    h1.textContent = `글자 수: ${length}`
+                }, 50) //0.05초 뒤에 실행
+            })
+            textarea.addEventListener('blur', (event) => {
+                clearInterval(timerld)
+            })  //focus가 안 맞쳐져있을 때에 양식에 글자가 써지는 것 연결 끊어짐
+        })
+    </script>
+</head>
+<body>
+    <h1></h1>
+    <textarea></textarea>
+</body>
+</html>

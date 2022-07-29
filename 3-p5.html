@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        const rawInput = prompt('태어난 해를 입력해주세요.', '')
+        const year = Number(rawInput)
+
+        const tti = '신, 유, 술, 해, 자, 축, 인, 묘, 진, 사, 오, 미'.split(',')
+        const tta = '경, 신, 임, 계, 갑, 을, 병, 정'.split(',')
+
+        alert(`${year}년은 ${tta[year%10]}${tti[year%12]} 년 입니다.`)
+
+    </script>
+</head>
+<body>
+</body>
+</html>

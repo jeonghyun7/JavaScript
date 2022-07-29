@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        const num = 52000
+        num.원 = function () {
+            return this.valueOf() + '원'
+        }
+        console.log(num.원())
+
+        /* 오류 메시지가 나온다.
+        num은 기본 자료형이므로 메소드가 추가되지 않습니다. num과 같은
+        기본자료형은 대응되는 객체 자료형의 프로토타입(prototype 속성)에 메소드를
+        추가해야합니다. */
+    </script>
+</head>
+<body>
+</body>
+</html>

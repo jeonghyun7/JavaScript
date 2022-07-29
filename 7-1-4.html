@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            //요소를 읽어들입니다.
+            const headers = document.querySelectorAll('h1')
+
+            //텍스트와 스타일을 변경합니다.
+            headers.forEach((abc) => {
+                abc.textContent = 'HEADERS'
+                abc.style.color = 'white'
+                abc.style.backgroundColor = 'black'
+                abc.style.padding = '10px'
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+</body>
+</html>
